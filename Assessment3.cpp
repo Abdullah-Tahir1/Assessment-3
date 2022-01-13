@@ -3,13 +3,13 @@
 #include<iomanip>
 int CategorySelection();
 int SubCategorySelection(int CategoryChoice);
-void MoneyAndChange(float Money, int ItemNumber);
+void MoneyAndChange(long Money, int ItemNumber);
 HANDLE k = GetStdHandle(STD_OUTPUT_HANDLE);
 using namespace std;
 int main()
 {
     int CategoryChoice, ItemNumber;
-    float Money;
+    long Money;
     CategoryChoice = CategorySelection();
     ItemNumber = SubCategorySelection(CategoryChoice);
     SetConsoleTextAttribute(k, 1);
@@ -101,7 +101,7 @@ int SubCategorySelection(int CategoryChoice)
     }
     return ItemNumber;
 }
-void MoneyAndChange(float Money, int ItemNumber)
+void MoneyAndChange(long Money, int ItemNumber)
 {
     string Menu[6] = { "Ice Tea", "Milk Tea", "Black Tea","Ice Coffee", "Milk Coffee", "Black Coffee" }, Answer;
     int Basket = 0;
